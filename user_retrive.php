@@ -78,9 +78,9 @@ session_start();
         background-color:rgb(26, 83, 93);
     }
 
-	h2{
-		margin-top:50px;
-		font-weight:lighter;
+	  h2{
+		  margin-top:50px;
+		  font-weight:lighter;
     }
     .p{
         font-size:1.2em;

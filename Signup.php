@@ -15,7 +15,6 @@
             }
             h1{
                 color:white;
-                font-size:1.5em;
                 font-weight:lighter;
             }
             .box{

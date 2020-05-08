@@ -98,14 +98,13 @@ session_start();
  include ('header.php');?>
 
 <div class="bottom">
+    <form action="sendEmail.php" method="post">
     <div class='contact'><h4>ContactUs</h4>
-      <input type="text" placeholder="Your Email Address" id="input" /><br>
-      <textarea id="input2" rows="4" cols="100" placeholder="Write Your Message Here ..."></textarea>
+      <input type="text" name="email" placeholder="Your Email Address" id="input" /><br>
+      <textarea id="input2" name="text" rows="4" cols="100" placeholder="Write Your Message Here ..."></textarea>
     </div>
     <button class="send">Send</button>
-    <!-- <h4>CONTACT US HERE!</h4> -->
-    <!-- <h2><b>For all queries please contact us at the below addresses:</b></h2>
-    <h4>This is the contact us page</h4> -->
+    </form>
 </div>
 <div class="foot">
     Made With <img src="Vector.svg"> By CSE Techies Of KIET-W

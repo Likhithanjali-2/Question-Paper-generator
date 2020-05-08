@@ -5,10 +5,10 @@ session_start();
 <html>
 <head>
     <title>Add paper</title>
-		<link rel="stylesheet" href="1.css" type="text/css"/>
-		  <script type="text/javascript" src="jquery.min.js"></script>
-  <script type="text/javascript" src="jquery.timepicker.js"></script>
-  <link rel="stylesheet" type="text/css" href="jquery.timepicker.css" />
+	<link rel="stylesheet" href="1.css" type="text/css"/>
+	<script type="text/javascript" src="jquery.min.js"></script>
+  	<script type="text/javascript" src="jquery.timepicker.js"></script>
+  	<link rel="stylesheet" type="text/css" href="jquery.timepicker.css" />
 
 
 </head>
