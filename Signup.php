@@ -62,7 +62,7 @@
                 border:none;
             }
 
-            #submit,#reset,#cancel:focus{
+            #submit:focus,#reset:focus,#cancel:focus{
                 outline: 0;
             }
             form>a:link, form>a:visited{
