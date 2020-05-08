@@ -7,13 +7,13 @@ session_start();
     <title>Sign up page</title>
     <style>
     .bottom {
-    /* height :500px; */
-    position:  inherit;
-    background-color: rgb(31, 104, 117);
-    color:white;
-    padding: 20px;
-    padding-left:60px;
-    margin: 10px 0px 0px 0px;
+        /* height :500px; */
+        position:  inherit;
+        background-color: rgb(31, 104, 117);
+        color:white;
+        padding: 20px;
+        padding-left:60px;
+        margin: 10px 0px 0px 0px;
     }
     .box>p{
         color:white;

@@ -1,5 +1,5 @@
 <?php
- //session_start();
+//  session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -10,8 +10,6 @@
         #head {
             background-image: url('header.jpg');
             width:100%;
-            /* height:280px; */
-            /* text-align:center; */
         }
 
         #strong{
@@ -19,12 +17,11 @@
             text-shadow: 1px 1px 2px white, 0 0 25px white, 0 0 5px rgb(31, 104, 117);
             font-size:2.1em;
             text-align:center;
-            /* padding-left:100px; */
             padding-bottom:70px;
             padding-top:50px;
         }
 
-        a:link, a:visited {
+        li>a:link, li>a:visited {
                 background-color:rgb(31, 104, 117);
                 color: white!important;
                 padding: 12px 20px;
@@ -35,14 +32,14 @@
                 border-radius:5px;
         }
 
-        a:hover, a:active {
+        li>a:hover, li>a:active {
             background-color: rgb(26, 83, 93);
             color:white;
         }
 
         #menu{
             /* border:1px solid black; */
-            margin-bottom:20px;
+            margin-bottom:0px;
             /* width:900px; */
             /* float: right; */
             /* padding-left:00px; */
@@ -50,14 +47,23 @@
             flex-direction: row;
             justify-content: flex-end;
         }
+        /* .user{
+            margin-left:70%;
+            margin-top:35px;
+            margin-right:20px;
+            font-size:1em;
+            font-weight:bold;
+            color:black;
+            float:right;
+        } */
 
     /* li{
         list-style:none;
     } */
     </style>
 </head>
-<body>
 <div id="head">
+<body>
     <div id="strong">QUESTION PAPER GENERATOR</div>
 
 
@@ -77,14 +83,14 @@
     echo "<li> <a href='adminoptions.php'>ADMIN OPTIONS</a></li>";
     echo "<li> <a href='contact.php'>CONTACT</a></li>";
     echo "<li> <a href='logout.php'>LOGOUT</a></li>";
-    echo "<li> Welcome ".$_SESSION['currentuser']." </li> ";
+    // echo "<br><div class='user'>Welcome ".$_SESSION['currentuser']."</div>";
 	}
 	else
 	{
 	 echo "<li> <a href='addpaperuser.php'>CREATE PAPER</a></li>";
      echo "<li> <a href='contact.php'>CONTACT</a></li>";
      echo "<li> <a href='logout.php'>LOGOUT</a></li>";
-     echo "<li> Welcome ".$_SESSION['currentuser']."  </li> ";
+    //  echo "<br><div class='user'>Welcome ".$_SESSION['currentuser']."</div>";
 	}
 	}
 	else 
@@ -93,7 +99,7 @@
     echo "<li> <a href='login.php'>LOGIN</a></li>";
 	}
 	?>
-     </ul>
+    </ul>
 
 </div>
 </div>

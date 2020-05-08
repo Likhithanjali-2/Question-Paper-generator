@@ -8,12 +8,12 @@ session_start();
     <style>
     .bottom {
     /* height :500px; */
-    position:  inherit;
-    background-color: rgb(31, 104, 117);
-    color:white;
-    padding: 20px;
-    padding-left:60px;
-    margin: 10px 0px 0px 0px;
+        position:  inherit;
+        background-color: rgb(31, 104, 117);
+        color:white;
+        padding: 20px;
+        padding-left:60px;
+        margin: 10px 0px 0px 0px;
     }
     .contact{
         margin-left:30%;
@@ -43,7 +43,7 @@ session_start();
         background-color: transparent;
         border:1px solid white;
         color: white;
-        margin-left: 40%;
+        margin-left: 43%;
     }
     .send:hover{
         /* background-color: white;
