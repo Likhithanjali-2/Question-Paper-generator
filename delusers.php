@@ -217,7 +217,7 @@ while ($row = mysqli_fetch_array($query)) {
 
 echo '</select>';
 
-		 ?>
+?>
 
 <input class="input" type="submit" value="Delete user" name="deluser"/> 
 
@@ -226,4 +226,7 @@ echo '</select>';
 
 </form>
 </body>
+<div class="foot">
+    Made With <img src="Vector.svg"> By CSE Techies Of KIET-W
+</div>
 </html>

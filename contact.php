@@ -98,7 +98,7 @@ session_start();
  include ('header.php');?>
 
 <div class="bottom">
-    <form action="sendEmail.php" method="post">
+    <form action="send.php" method="post">
     <div class='contact'><h4>ContactUs</h4>
       <input type="text" name="email" placeholder="Your Email Address" id="input" /><br>
       <textarea id="input2" name="text" rows="4" cols="100" placeholder="Write Your Message Here ..."></textarea>

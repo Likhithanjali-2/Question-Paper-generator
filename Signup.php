@@ -107,7 +107,6 @@
  include ('header.php');
  include ('connection.php');?>
 
-<form action="signupscript.php" method="post">       
 <div class="bottom">
 	    <h1>SIGNUP HERE!</h1>    
         <div class="box">
@@ -119,7 +118,7 @@
                 <input type="text" name="board" placeholder="Board/university Name:"><br>
                 <input type="text" name="email" placeholder="Email"><br>
                 <input type="password" name="password" placeholder="Password"><br>
-                <textarea id="input2" rows="4" cols="100" placeholder="Address ..."></textarea><br>
+                <textarea id="input2" rows="4" cols="100" name="address" placeholder="Address ..."></textarea><br>
                 <input type="text" name="country" placeholder="Country"><br>
                 <input type="text" name="desc" placeholder="Description"><br>
                 <div class="radio"><input value="student" type="radio" name="type" />Student&nbsp;

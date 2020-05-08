@@ -14,7 +14,8 @@ session_start();
     }
 
     .dropbtn {
-      background-color: rgb(31, 104, 117);rgb(26, 83, 93);//rgb(31, 104, 117);
+      background-color: rgb(51, 150, 153);
+      border-radius:5px;
       color: white;
       padding: 10px;
       font-size: 20px;

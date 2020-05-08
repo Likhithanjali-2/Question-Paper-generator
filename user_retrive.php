@@ -12,8 +12,8 @@ session_start();
     }
 
     .dropbtn {
-	  background-color: rgb(51, 150, 153);
-	  border-radius:5px;
+	    background-color: rgb(51, 150, 153);
+  	  border-radius:5px;
       color: white;
       padding: 10px;
       font-size: 20px;
@@ -128,11 +128,12 @@ $query="DELETE FROM tbuser where uemail= '$selected_email'";
 $result=mysqli_query($conn,$query) or die("<p class='p'>Unable to delete record</p>");
 echo $selected_email."<p class='p'> is deleted from the accounts..!!</p>";
 ?>
-
-
 </div>
 </div>
 
 </form>
 </body>
+<div class="foot">
+    Made With <img src="Vector.svg"> By CSE Techies Of KIET-W
+</div>
 </html>
