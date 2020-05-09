@@ -4,34 +4,44 @@ session_start();
 ?>
 <html>
 <head>
-    <title>Question paper page</title>
+    <title>Digitalized question paper</title>
 	<link rel="stylesheet" href="1.css" type="text/css">
 	<script src="jquery-2.0.3.js"></script>
 	<style>
 			.bottom {
-                height :300px;
+                height :500px;
                 position:  inherit;
-                background-color: rgb(31, 104, 117);
-                color:white;
+                background-color:white;
+                color:black;
                 padding: 20px;
                 padding-left:60px;
                 margin: 10px 0px 0px 0px;
 			}
-			.foot{
-				letter-spacing:1px;
-				color:white;
-				padding:20px;
-				text-align:center;
-				background-color:rgb(26, 83, 93);
-			}
+            #submit{
+                background-color:rgb(51, 150, 153);
+                color: white;
+                border-radius: 30px;
+                width:100px;
+                height:30px;
+                font-size: 1.2em;
+                border:1px solid transparent;
+				margin-left: 900px;
+				margin-top:30px;
+                margin-bottom: 80px;
+            }
+            #submit:hover{
+                background-color: rgb(26, 83, 93);
+                color:white;
+                border:none;
+            }
+
+            #submit:focus{
+                outline: 0;
+            }
 	</style>
 </head>
-	<body>
-<?php	
+<body>
 
- include ('header.php');
-?> 
-<form action="preview.php" method="POST">
 <div class="bottom">
 	<?php
 	include ('connection.php');
@@ -54,15 +64,12 @@ session_start();
 	else if($qtype=='tbqbrief')
 	{
 	$type="Brief questions";
-	}
-	else if($qtype=='tbqqmcq')
+    }
+    else
 	{
 	$type="Multiple choice questions";
 	}
-	else
-	{
-	$type="other questions";
-	}
+
 	$noofquestions=$_POST["noofquestions"];
 	$totmarks=$_POST["totmarks"];
 	$time=$_POST["time"];
@@ -99,81 +106,87 @@ session_start();
 	echo"<td>&nbsp;</td>"; 
 
 	echo"</tr>";
-
-
+    $count=0;
 	if ($qtype=="tbq1word")
 	{
 		$result=mysqli_query($conn,"Select * from tbq1word where subid=$subid");
 		echo "</table>";
 		echo"<table border='0' align='center' width='800'>";
 		echo "<tr><td>Answer the $type:</td></tr>";
-		echo "<br>";
+        echo "<br>";
 		while($row = mysqli_fetch_assoc($result))
 		{
-			$num = $row['wordid'];
+            $num = $row['wordid'];
 			if(isset($_REQUEST[$num]))
 			{
+                $count+=1;
 				echo"<tr>";
 				echo"<td>";
 				$val = $_REQUEST[$num];
-				echo $val;
+                echo "$count. $val";
 				echo"</td>";
 				echo"</tr>";
 			}
 		}
 		echo "</table >";
 	}
-	else if ($qtype="tbqbrief")
+	else if ($qtype=="tbqbrief")
 	{
 		$result=mysqli_query($conn,"Select * from tbqbrief where subid=$subid");
 		echo "</table>";
 		echo"<table border='0' align='center' width='800'>";
 		echo "<tr><td>Answer the $type:</td></tr>";
-		echo "<br>";
+        echo "<br>";
 		while($row = mysqli_fetch_assoc($result))
+        echo"<td>";
 		{
-			$num = $row['bid'];
+            $num = $row['bid'];
 			if(isset($_REQUEST[$num]))
 			{
+                $count+=1;
 				echo"<tr>";
-				echo"<td>";
 				$val = $_REQUEST[$num];
-				echo $val;
+                echo "$count. $val";
 				echo"</td>";
 				echo"</tr>";
-			}
-		}
-		echo "</table >";
-	}
-	else
+            }
+        echo "</table >";
+        }
+    }
+    else
 	{
-		$result=mysqli_query($conn,"Select * from tbqmcw where subid=$subid");
+		$result=mysqli_query($conn,"Select * from tbqmcq where subid=$subid");
 		echo "</table>";
 		echo"<table border='0' align='center' width='800'>";
 		echo "<tr><td>Answer the $type:</td></tr>";
-		echo "<br>";
-		while($row = mysqli_fetch_assoc($result))
-		{
-			$num = $row['mcqid'];
+        echo "<br>";
+        while($row = mysqli_fetch_assoc($result)){
+            $num = $row['mcqid'];
 			if(isset($_REQUEST[$num]))
 			{
+                $count+=1;
 				echo"<tr>";
-				echo"<td>";
-				$val = $_REQUEST[$num];
-				echo $val;
-				echo"</td>";
-				echo"</tr>";
+                $val = $_REQUEST[$num];
+                echo"<td>";
+                echo "$count. $val";
+                echo"</td>";
+                echo"<td>";
+                echo "A) ".$row["mcqanswer1"] ."     B) ". $row["mcqanswer2"] ."     C) ". $row["mcqanswer3"] ."     D) ". $row["mcqanswer4"];
+                echo"</td>";
+                echo"</tr>";
+                echo"<br>";
 			}
 		}
 		echo "</table >";
-	}
+    }
 	?>
-	<button onclick="">Preview</button>
+    <button id="submit" onclick="myFunction()">Print</button>
+	<script>
+		function myFunction()
+		{
+			window.print();
+		}
+	</script>
 </div>
-</form>
 </body>
-<div class="foot">
-    Made With <img src="Vector.svg"> By CSE Techies Of KIET-W
-</div>
-
 </html>

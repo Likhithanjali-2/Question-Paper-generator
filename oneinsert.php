@@ -62,8 +62,8 @@ $_SESSION['sub_id']=$subid;
 
 
 $query ="SELECT max(wordid) FROM tbq1word";
-$result = mysql_query($query) or die ("Error in query: $query. " .mysql_error());
-$row = mysql_fetch_row($result);
+$result = mysqli_query($conn,$query) or die ("Error in query: $query. " .mysqli_error());
+$row = mysqli_fetch_row($result);
 $max= $row[0];
 
 $id=$max+1;
@@ -71,9 +71,9 @@ $id=$max+1;
 if($subid==1)
 {
 $select="INSERT INTO tbq1word VALUES('$id','$question','$answer','$email',1)";
-if (!mysql_query($select,$conn))
+if (!mysqli_query($conn,$select))
  {
-die('Error: ' . mysql_error($conn));
+die('Error: ' . mysqli_error($conn));
  }else
  echo "1 question is added";
 
@@ -81,9 +81,9 @@ die('Error: ' . mysql_error($conn));
 else
 {
 $select="INSERT INTO tbq1word VALUES('$id','$question','$answer','$email','2')";
-if (!mysql_query($select,$conn))
+if (!mysqli_query($select,$conn))
  {
- die('Error: ' . mysql_error($conn));
+ die('Error: ' . mysqli_error($conn));
  }else
  echo "1 question is added";
 

@@ -88,7 +88,7 @@ session_start();
 ?> 
 
 
-<form action="questionpaperuser.php" method="POST">
+<form action="questionPaperTemplate.php" method="POST">
 <div class="bottom"> 
 	<?php
 	$subid=$_POST["subid"];
