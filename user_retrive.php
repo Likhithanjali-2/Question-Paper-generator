@@ -114,8 +114,9 @@ session_start();
     <div class="dropdown">
       <button class="dropbtn">Papers</button>
       <div class="dropdown-content" style="left:0;">
-        <a href ="papers.php">Show papers</a>
-        <a href ="addpaper.php">Add paper</a>
+        <a href ="add1word.php">Add new short question</a>
+        <a href ="addbrief.php">Add new brief question</a>
+        <a href ="addmcq.php">Add new MCQ</a>
       </div>
     </div>
   </div>
@@ -126,7 +127,7 @@ include ('connection.php');
 $selected_email = $_POST['Email'];
 $query="DELETE FROM tbuser where uemail= '$selected_email'";
 $result=mysqli_query($conn,$query) or die("<p class='p'>Unable to delete record</p>");
-echo $selected_email."<p class='p'> is deleted from the accounts..!!</p>";
+echo "<p class='p'>".$selected_email." is deleted from the accounts..!!</p>";
 ?>
 </div>
 </div>

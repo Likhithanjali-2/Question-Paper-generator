@@ -138,20 +138,43 @@ session_start();
 		echo "<tr><td>Answer the $type:</td></tr>";
         echo "<br>";
 		while($row = mysqli_fetch_assoc($result))
-        echo"<td>";
 		{
             $num = $row['bid'];
 			if(isset($_REQUEST[$num]))
 			{
                 $count+=1;
 				echo"<tr>";
+				echo"<td>";
 				$val = $_REQUEST[$num];
                 echo "$count. $val";
 				echo"</td>";
 				echo"</tr>";
-            }
-        echo "</table >";
-        }
+			}
+		}
+		echo "</table >";
+
+
+		// $result=mysqli_query($conn,"Select * from tbqbrief where subid=$subid");
+		// echo "</table>";
+		// echo"<table border='0' align='center' width='800'>";
+		// echo "<tr><td>Answer the $type:</td></tr>";
+        // echo "<br>";
+		// while($row = mysqli_fetch_assoc($result))
+		// {
+        //     $num = $row['bid'];
+		// 	if(isset($_REQUEST[$num]))
+		// 	{
+        //         $count+=1;
+		// 		echo"<tr>";
+		// 		$val = $_REQUEST[$num];
+		// 		echo"<td>";
+        //         echo "$count. $val";
+		// 		echo"</td>";
+		// 		echo"<br>";
+		// 		echo"</tr>";
+        //     }
+        // echo "</table >";
+        // }
     }
     else
 	{

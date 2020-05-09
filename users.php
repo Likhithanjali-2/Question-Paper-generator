@@ -11,14 +11,14 @@ session_start();
 
 		</script>
 	<style>
-	.dropdown {
+	  .dropdown {
       position: relative;
       display: inline-block;
     }
 
     .dropbtn {
-	  background-color: rgb(51, 150, 153);
-	  border-radius:5px;
+      background-color: rgb(51, 150, 153);
+      border-radius:5px;
       color: white;
       padding: 10px;
       font-size: 20px;
@@ -130,8 +130,9 @@ session_start();
     <div class="dropdown">
       <button class="dropbtn">Papers</button>
       <div class="dropdown-content" style="left:0;">
-        <a href ="papers.php">Show papers</a>
-        <a href ="addpaper.php">Add paper</a>
+        <a href ="add1word.php">Add new short question</a>
+        <a href ="addbrief.php">Add new brief question</a>
+        <a href ="addmcq.php">Add new MCQ</a>
       </div>
     </div>
   </div>

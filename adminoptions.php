@@ -102,8 +102,9 @@ session_start();
     <div class="dropdown">
       <button class="dropbtn">Papers</button>
       <div class="dropdown-content" style="left:0;">
-        <a href ="papers.php">Show papers</a>
-        <a href ="addpaper.php">Add paper</a>
+        <a href ="add1word.php">Add new short question</a>
+        <a href ="addbrief.php">Add new brief question</a>
+        <a href ="addmcq.php">Add new MCQ</a>
       </div>
     </div>
   </div>
