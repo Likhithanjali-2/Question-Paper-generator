@@ -10,6 +10,7 @@
         #head {
             background-image: url('header.jpg');
             width:100%;
+            /* border:1px solid black; */
         }
 
         #strong{
@@ -20,7 +21,7 @@
             padding-bottom:70px;
             padding-top:50px;
         }
-
+    
         li>a:link, li>a:visited {
                 background-color:rgb(31, 104, 117);
                 color: white!important;
@@ -30,6 +31,7 @@
                 display: inline-block;
                 border:1px solid transparent;
                 border-radius:5px;
+                margin:20px 20px 10px 20px;
         }
 
         li>a:hover, li>a:active {
@@ -40,26 +42,18 @@
         #menu{
             /* border:1px solid black; */
             margin-bottom:0px;
-            /* width:900px; */
-            /* float: right; */
-            /* padding-left:00px; */
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
+            /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; */
+            /* width:100px; */
+            /* float: right; */
+            /* padding-left:00px;
+            display: grid;
+            flex-direction: column-reverse;
+            justify-content: flex-end; */
         }
-        /* .user{
-            margin-left:70%;
-            margin-top:35px;
-            margin-right:20px;
-            font-size:1em;
-            font-weight:bold;
-            color:black;
-            float:right;
-        } */
-
-    /* li{
-        list-style:none;
-    } */
     </style>
 </head>
 <div id="head">
@@ -68,28 +62,26 @@
 
 
 <div id="conetnt" >   
-    <div id = "menu">
    <?php
-	 
-  echo "<ul type='none'>";
-  echo "<li> <a href='Index.php'>HOME</a></li>";
-  echo "<li><a href='aboutus.php'>ABOUT US</a></li>";
+  echo "<ul id = 'menu' type='none'>";
+  echo "<div><li> <a href='Index.php'>HOME</a></li></div>";
+  echo "<div><li><a href='aboutus.php'>ABOUT US</a></li></div>";
    ?>
    <?php
     if(isset($_SESSION['currentuser']))
 	{
     if($_SESSION['currentuser']=="admin@exam.com")
 	{
-    echo "<li> <a href='adminoptions.php'>ADMIN OPTIONS</a></li>";
-    echo "<li> <a href='contact.php'>CONTACT</a></li>";
-    echo "<li> <a href='logout.php'>LOGOUT</a></li>";
+    echo "<div><li> <a href='adminoptions.php'>ADMIN OPTIONS</a></li></div>";
+    echo "<div><li> <a href='contact.php'>CONTACT</a></li></div>";
+    echo "<div><li> <a href='logout.php'>LOGOUT</a></li></div>";
     // echo "<br><div class='user'>Welcome ".$_SESSION['currentuser']."</div>";
 	}
 	else
 	{
-	 echo "<li> <a href='addpaperuser.php'>CREATE PAPER</a></li>";
-     echo "<li> <a href='contact.php'>CONTACT</a></li>";
-     echo "<li> <a href='logout.php'>LOGOUT</a></li>";
+	 echo "<div><li> <a href='addpaperuser.php'>CREATE PAPER</a></li></div>";
+     echo "<div><li> <a href='contact.php'>CONTACT</a></li></div>";
+     echo "<div><li> <a href='logout.php'>LOGOUT</a></li></div>";
     //  echo "<br><div class='user'>Welcome ".$_SESSION['currentuser']."</div>";
 	}
 	}
@@ -100,8 +92,6 @@
 	}
 	?>
     </ul>
-
-</div>
 </div>
    <br/>
 </body>

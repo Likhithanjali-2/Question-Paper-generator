@@ -4,7 +4,7 @@ session_start();
 ?>
 <html>
 <head>
-    <title>Sign up page</title>
+    <title>About Us</title>
     <style>
     .bottom {
         /* height :500px; */
@@ -17,14 +17,15 @@ session_start();
     }
     .box>p{
         color:white;
-        font-size:1.3em;
+        font-size:1.1em;
         letter-spacing:1px;
         font-weight:lighter;
     }
-    h4{
+    #h4{
         color:white;
-        font-size:1.5em;
+        font-size:2em;
         font-weight:lighter;
+        margin-left:470px;
     }
     .box{
         border:2px solid white;
@@ -50,20 +51,18 @@ session_start();
  include ('header.php');?>
 
 <div class="bottom">
-    <h1>ABOUT US!</h1>
+    <h1 id="h4">ABOUT US!</h1>
     <div class = "box">
-    <p>The Right Click Solutions is well diversified infrastructural industrial conglomerate in India.
-    Over the decades it has maintained its salience with leadership in its chosen line of businesses - Engineering and Construction, Cement, Private Hydropower, Hospitality, Real Estate Development, Expressways and Highways and Education.
+    <p>
+    Existing system is a manual one in which users are maintaining books to store the information like Student Details,Instructor Details,Schedule Details and feedback about students who attempted the exam as per schedule.. It is very difficult to maintain historical data. 
     </p>
     <p>
-    Right Click Solutions is an ISO 9001-2008 certified company and is an Infotech arm of the diversified Right solutions Group. The address of registered office of RCS is:
-    Head office : 403,Arun soc ,Near Om Super Market
+    This application is used to conduct online examinations. The students can sit at individual terminals and login to write the exam in the given duration. . The questions have to be given to the students.This application will perform correction, display the result immediately and also store it in the database. This application provides the administrator with a facility to add new exams.This application provides the  Instructor  add questions to the exam, modify questions in the exam in a particular exam. This application takes care of authentication of the administrator, Instructor as well as the student.
     </p>
     <p>
-    As a leading player in the education content development segment, RCS had pioneered - "Bhartiyavidya" -India's first digital-classroom-teaching aid that is facilitating the teaching process in over 650 schools across the country and overseas.
+    The project is aimed at developing a website for the “FACULTY” of the college. This can be accessed and effectively used throughout the organization with proper login enabled. This system can be used as an application for the Faculty in the college to manage the Examination. To conduct any quiz or any examinations question papers are mandatory. Faculty members put time consumed efforts to prepare question papers. The proposed “QUESTION PAPER GENERATOR”, simplify this process. The Online Digital Question paper helps to create the examination question paper. It takes required data as input from the user such as questions, marks, subject name etc. Users can view the designed paper. This project is developed with HTML, CSS, JavaScript  for frontend and PHP , MySQL for backend. 
     </p>
-    <p>
-    Bhartiyavidya is a content rich, high quality multimedia based pioneering effort in the area of computer aided classroom teaching that helps the teacher explain difficult concepts in subjects like science, mathematics and social sciences through the aid of visual capsules inside the classroom. Bhartiyavidya solution encompasses a digital library of over 3500 capsules of about 3 minutes duration.
+    <p>Developed by A.LIKHITHANJALI for any queries contact by feedback or email to liki2444@gmail.com  
     </p>
     </div>
     <!-- <div class='about'>

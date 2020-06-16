@@ -16,6 +16,7 @@
                 color:white;
                 font-size:1.5em;
                 font-weight:lighter;
+                text-align:center;
             }
             .box{
                 border:2px solid transparent;
